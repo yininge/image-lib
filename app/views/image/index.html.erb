@@ -1,0 +1,7 @@
+<h1>Image#index</h1>
+ <% @images.each do |t| %>
+ <p><%=t.description %></p>
+  <% if t.file.attached? %>
+    <%= image_tag(url_for(t.file)) %>
+  <% end %>
+<% end %>
